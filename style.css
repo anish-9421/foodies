@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url(image/hero_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+
+}
+
+.navbar {
+    display: flex;
+    height: 20vh;
+    width: 100%;
+    padding: 12px 32px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo {
+    width: 95px;
+}
+
+.logo>img {
+    width: 100%
+}
+
+#active {
+    color: #FEA116;
+}
+
+
+
+.nav-links>a {
+    text-decoration: none;
+    color: aqua;
+
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+
+}
+
+.nav-btn {
+    padding: 6px 26px;
+    background-color: #FEA116;
+    transition: 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 4px 4px 15px black;
+    transform: translateY(-4px);
+
+}
+
+.main-heading-container {
+    height: 80vh;
+    width: 100%;
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+
+}
+
+.main-heading h1 {
+    color: white;
+    font-size: 75px;
+
+
+}
+
+.main-heading p {
+    font-size: 16px;
+    color: white;
+
+}
+
+.hero-btn {
+    margin-top: 18px;
+    display: inline-block;
+    background-color: #FEA116;
+    text-decoration: none;
+    padding: 15px 40px;
+
+}
+
+.main-heading {
+    width: 50%;
+}
+
+.hero-food {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-food img {
+    width: 80%;
+    object-fit: contain;
+}
+
+.hero-overlay {
+
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    z-index: 1;
+
+}
+
+.hero * {
+    z-index: 2;
+}
+
+.close {
+    width: 50px;
+    display: none;
+
+}
+
+.open {
+    width: 50px;
+    display: none;
+
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .close {
+        display: block;
+        cursor: pointer;
+
+    }
+
+    .open {
+        display: block;
+        cursor: pointer;
+
+
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 0;
+        right: -250px;
+        flex-direction: column;
+        padding: 20px 0px;
+        height: 100vh;
+        background-color: white;
+        justify-content: flex-start;
+        z-index: 99;
+        width: 200px;
+        gap: 40px;
+
+    }
+}
